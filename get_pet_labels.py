@@ -42,9 +42,15 @@ def get_pet_labels(image_dir):
     """
     # Replace None with the results_dic dictionary that you created with this
     # function
+
+    #new empty dictionary
     results_dic = dict()
+
+    #retrieve all the file names of the files in the directory and add them to list
     filename_list = listdir(image_dir)
     pet_labels = []
+
+    #loop through the list and format the string to create pet label
     for filename in filename_list:
         name = filename.lower().split("_")
         label = ""
@@ -53,6 +59,7 @@ def get_pet_labels(image_dir):
                 label += word + " "
         pet_labels.append(label.strip())
 
+    #adding the generated labels to the result_dic dictionary
     for i in range(0, len(filename_list)):
         if filename_list[i] not in results_dic:
             results_dic[filename_list[i]] = [pet_labels[i]]

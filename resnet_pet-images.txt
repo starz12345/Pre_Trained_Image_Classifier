@@ -322,10 +322,10 @@ Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.0
 N Images            :  40
 N Dog Images        :  30
 N Not-Dog Images    :  10
-% Match             : 82.50
-% Correct Dogs      : 100.00
-% Correct Breed     : 90.00
-% Correct "Not-a" Dog: 90.00
+pct_match           : 82.50
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 90.00
+pct_correct_notdogs : 90.00
 
 INCORRECT Dog/NOT Dog Assignments:
 Pet Label:                       cat Classifier Label:  norwegian elkhound, elkhound

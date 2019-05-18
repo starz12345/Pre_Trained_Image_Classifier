@@ -70,6 +70,7 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """
+    #read the dogfile into a dictionary
     dogs = dict()
     with open(dogfile, "r") as file:
         for line in file:
@@ -79,14 +80,14 @@ def adjust_results4_isadog(results_dic, dogfile):
                 dogs[line] += 1
 
     for filename, pet in results_dic.items():
-        if pet[0] in dogs:
-            if pet[1] in dogs:
+        if pet[0] in dogs: #add match values for dog if pet image label is a dog
+            if pet[1] in dogs: #adds(1, 1) because both are dogs
                 results_dic[filename] = [pet[0], pet[1], pet[2], 1, 1]
-            else:
+            else: #adds(1, 0) because only pet_label is a dog
                 results_dic[filename] = [pet[0], pet[1], pet[2], 1, 0]
-        else:
-            if pet[1] in dogs:
+        else:  #add match values for dog if pet image label is not a dog
+            if pet[1] in dogs: #adds (0, 1)because only Classifier label is a dog
                 results_dic[filename] = [pet[0], pet[1], pet[2], 0, 1]
-            else:
+            else: #adds(0, 0) because both are not dogs
                 results_dic[filename] = [pet[0], pet[1], pet[2], 0, 0]
-    None
+

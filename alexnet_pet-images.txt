@@ -322,10 +322,10 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
 N Images            :  40
 N Dog Images        :  30
 N Not-Dog Images    :  10
-% Match             : 75.00
-% Correct Dogs      : 100.00
-% Correct Breed     : 80.00
-% Correct "Not-a" Dog: 100.00
+pct_match           : 75.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 80.00
+pct_correct_notdogs : 100.00
 
 INCORRECT Dog Breed Assignment:
 Real:                     beagle   Classifier:  walker hound, walker foxhound

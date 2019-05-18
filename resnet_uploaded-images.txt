@@ -64,10 +64,10 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 N Images            :   4
 N Dog Images        :   2
 N Not-Dog Images    :   2
-% Match             : 75.00
-% Correct Dogs      : 100.00
-% Correct Breed     : 100.00
-% Correct "Not-a" Dog: 100.00
+pct_match           : 75.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 100.00
+pct_correct_notdogs : 100.00
 
 ** Total Elapsed Runtime: 0:0:0
 Done

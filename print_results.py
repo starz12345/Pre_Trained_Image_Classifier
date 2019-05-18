@@ -70,11 +70,7 @@ def print_results(results_dic, results_stats_dic, model,
 
     for key in results_stats_dic:
         if key[0] == 'p':
-            print("{:20}: {:.2f}".format('% Match', results_stats_dic['pct_match']))
-            print("{:20}: {:.2f}".format('% Correct Dogs', results_stats_dic['pct_correct_dogs']))
-            print("{:20}: {:.2f}".format('% Correct Breed', results_stats_dic['pct_correct_breed']))
-            print("{:20}: {:.2f}".format('% Correct "Not-a" Dog', results_stats_dic['pct_correct_notdogs']))
-            break
+            print("{:20}: {:.2f}".format(key, results_stats_dic[key]))
 
     if print_incorrect_dogs:
         if (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images']:

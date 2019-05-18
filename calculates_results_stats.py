@@ -80,6 +80,7 @@ def calculates_results_stats(results_dic):
     results_stats_dic["n_correct_notdogs"] = 0
     results_stats_dic["n_correct_breed"] = 0
 
+    #count the values in the result_dictionary
     for filename, value in results_dic.items():
         if value[3] == 1:
             results_stats_dic["n_dogs_img"] += 1
@@ -94,9 +95,14 @@ def calculates_results_stats(results_dic):
         if value[2] == 1 and value[3] == 1:
             results_stats_dic["n_correct_breed"] += 1
 
+
+    # % Match
     results_stats_dic["pct_match"] = (results_stats_dic["n_match"] / results_stats_dic["n_images"]) * 100
+    #% Correct Dogs
     results_stats_dic["pct_correct_dogs"] = (results_stats_dic["n_correct_dogs"] / results_stats_dic["n_dogs_img"]) * 100
+    #% Correct Breed
     results_stats_dic["pct_correct_breed"] = (results_stats_dic["n_correct_breed"] / results_stats_dic["n_dogs_img"]) * 100
+    #% Correct "Not-a" Dog
     if results_stats_dic["n_notdogs_img"] > 0:
         results_stats_dic["pct_correct_notdogs"] = (results_stats_dic["n_correct_notdogs"] / results_stats_dic["n_notdogs_img"]) * 100
     else:
